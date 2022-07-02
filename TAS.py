@@ -11,7 +11,7 @@ reCountry = re.compile(r'country: *([A-Za-z]+?)\n')
 
 
 def parse(site, reg):
-    a = reg.findall(site)
+    a = re.findall(reg, site)
     if a:
         return a[0]
     return 'Нет данных'
